@@ -25,7 +25,7 @@ namespace Valve.VR.InteractionSystem
             bool hitBlock = collision.collider.gameObject.GetComponent<Block>() != null;
 
 
-            if (rbSpeed > 0.1f || hitBlock)
+            if (rbSpeed > 0.1f || hitBlock && collision.gameObject.tag.Equals("grayCube"))
             {
                 collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
                 gameObject.SendMessage("HasAppliedDamage", SendMessageOptions.DontRequireReceiver);
