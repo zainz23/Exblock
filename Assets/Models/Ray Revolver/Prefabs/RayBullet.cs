@@ -4,19 +4,8 @@ using UnityEngine;
 
 namespace Valve.VR.InteractionSystem
 {
-    public class RayRevolver : MonoBehaviour
+    public class RayBullet : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
         void OnCollisionEnter(Collision collision)
         {
 
@@ -24,13 +13,12 @@ namespace Valve.VR.InteractionSystem
             float rbSpeed = rb.velocity.sqrMagnitude;
             bool hitBlock = collision.collider.gameObject.GetComponent<Block>() != null;
 
-
             if (rbSpeed > 0.1f || hitBlock && collision.gameObject.tag.Equals("grayCube"))
             {
                 collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
                 gameObject.SendMessage("HasAppliedDamage", SendMessageOptions.DontRequireReceiver);
             }
-
         }
+
     }
 }

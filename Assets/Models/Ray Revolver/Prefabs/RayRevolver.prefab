@@ -1,5 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1929482998970921448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427095080186056956}
+  - component: {fileID: 5084286824620287042}
+  m_Layer: 0
+  m_Name: bulletspawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1427095080186056956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929482998970921448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.65, z: 6.096}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4994008075955657174}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5084286824620287042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929482998970921448}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab93b249bddb6f42a7d4e35d3edc917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4990113864665089888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,10 +2700,10 @@ GameObject:
   - component: {fileID: 4904965476569253834}
   - component: {fileID: 4990113866335358173}
   - component: {fileID: 4990113866335358175}
+  - component: {fileID: 6437768311320638832}
   - component: {fileID: 4990113866335358174}
-  - component: {fileID: 4990113866335358171}
   - component: {fileID: 4935525417846843461}
-  - component: {fileID: 4049440729524345363}
+  - component: {fileID: -4231755953474076059}
   m_Layer: 0
   m_Name: RayRevolver
   m_TagString: Untagged
@@ -2685,6 +2728,7 @@ Transform:
   - {fileID: 4994008074335134568}
   - {fileID: 4990113864670701690}
   - {fileID: 4990113865869912578}
+  - {fileID: 1427095080186056956}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2752,6 +2796,24 @@ MonoBehaviour:
   previewPoseSelection: 0
   blendingBehaviours: []
   scale: 1
+--- !u!114 &6437768311320638832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4991113866799886360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31c4beb84247b34fa746428a1451020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire:
+    actionPath: /actions/weapons/in/fire
+    needsReinit: 0
+  projectile: {fileID: 333199799015908087, guid: d38681a61c4768a44b81a1e5f45e3ac7,
+    type: 3}
+  speed: 100
 --- !u!114 &4990113866335358174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2765,10 +2827,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
-    actionSetPath: 
+    actionSetPath: /actions/weapons
   hideHandOnAttach: 1
   hideSkeletonOnAttach: 0
-  hideControllerOnAttach: 0
+  hideControllerOnAttach: 1
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
@@ -2803,18 +2865,6 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &4990113866335358171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4991113866799886360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31c4beb84247b34fa746428a1451020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4935525417846843461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2829,7 +2879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPackage: {fileID: 1400609548263775070, guid: aa55b84fec21d9146beb2192177851b6,
     type: 3}
---- !u!114 &4049440729524345363
+--- !u!114 &-4231755953474076059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
