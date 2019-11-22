@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6780834944519183502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2979368692038844597}
+  - component: {fileID: 3681775985247607361}
+  m_Layer: 0
+  m_Name: IceBallItemPackage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2979368692038844597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780834944519183502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.29967082, y: 2.2713945, z: -1.3492657}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3681775985247607361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780834944519183502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f83db71b9a6764abf964ab7679f035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: IceHand
+  packageType: 2
+  itemPrefab: {fileID: 2209337085152148983, guid: c132ed5db9dfc7443b3829b0065659d7,
+    type: 3}
+  otherHandItemPrefab: {fileID: 2209337085152148983, guid: c132ed5db9dfc7443b3829b0065659d7,
+    type: 3}
+  previewPrefab: {fileID: 5546106955283727617, guid: 3b8b4c856a6628a40b276783f9b838a9,
+    type: 3}
+  fadedPreviewPrefab: {fileID: 718304760271466083, guid: 289a9176c0ccc9346abd1f7ffd51dbb1,
+    type: 3}
