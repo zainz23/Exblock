@@ -10,10 +10,13 @@ namespace Valve.VR.InteractionSystem
         public Rigidbody attachPoint;   // Used for velocity calculations
         public float speedOffset;       // Adjustable speed setting
 
+        // Spawn trigger button
         public SteamVR_Action_Boolean spawn;
-
+        // Tracked controller
         private SteamVR_Behaviour_Pose trackedObj;
         FixedJoint joint;
+
+        static private bool firstTimeGrab = false;     // User can spawn object AFTER picking up magic ball
 
         private void Start()
         {
@@ -23,8 +26,16 @@ namespace Valve.VR.InteractionSystem
 
         private void FixedUpdate()
         {
+            // Dont spawn if we're using trigger to grab magic
+            if (!firstTimeGrab && spawn.GetStateDown(trackedObj.inputSource) )
+            {
+                firstTimeGrab = true;
+                return;
+            }
+
             if (joint == null && spawn.GetStateDown(trackedObj.inputSource))
             {
+
                 GameObject go = GameObject.Instantiate(prefab);
                 go.transform.position = attachPoint.transform.position;
 
@@ -36,15 +47,16 @@ namespace Valve.VR.InteractionSystem
                 GameObject go = joint.gameObject;
                 Rigidbody rigidbody = go.GetComponent<Rigidbody>();
                 Object.DestroyImmediate(joint);
+                // Dont want handle after throwing
                 joint = null;
-                // Destroy after 15s
-                Object.Destroy(go, 15.0f);
+                // Destroy after 5s
+                Object.Destroy(go, 5.0f);
 
                 Transform origin = trackedObj.origin ? trackedObj.origin : trackedObj.transform.parent;
                 if (origin != null)
                 {
                     rigidbody.velocity =  origin.TransformVector(trackedObj.GetVelocity() * speedOffset);
-                    rigidbody.angularVelocity = origin.TransformVector(trackedObj.GetAngularVelocity());
+                    rigidbody.angularVelocity = origin.TransformVector(trackedObj.GetAngularVelocity() );
                 }
                 else
                 {
@@ -53,7 +65,14 @@ namespace Valve.VR.InteractionSystem
                 }
 
                 rigidbody.maxAngularVelocity = rigidbody.angularVelocity.magnitude;
+
             }
+        }
+
+        private void OnDestroy()
+        {
+            // Update static variable
+            firstTimeGrab = false;
         }
 
     }
