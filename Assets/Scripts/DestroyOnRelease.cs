@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-using System.Collections;
-
 namespace Valve.VR.InteractionSystem
 {
     [RequireComponent(typeof(Interactable))]
