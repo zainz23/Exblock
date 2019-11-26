@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Valve.VR.InteractionSystem
 {
-    public class BallHand : MonoBehaviour
+    public class IceBallHand : MonoBehaviour
     {
         public GameObject prefab;       // The thing we are poofing up
         public Rigidbody attachPoint;   // Used for velocity calculations

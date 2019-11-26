@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-// This script primarily handles the "mechanics"
-// of throwing the spell ball
-// Methods are accessed via BallHand.cs
-public class BallBehavior : MonoBehaviour
+// This script handles the lifetime behavior
+// of an instantiated fire ball
+public class FireBallBehavior : MonoBehaviour
 {
-
     // Particle
     public GameObject explosionPrefab;  // Which is a child object of the ball effect
 
     private void OnCollisionEnter(Collision collision)
     {
         bool hitBlock = collision.collider.gameObject.GetComponent<Block>() != null;
-        if (hitBlock && collision.gameObject.tag.Equals("grayCube") )
+        if (hitBlock && collision.gameObject.tag.Equals("grayCube"))
         {
             Kill();
             collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
