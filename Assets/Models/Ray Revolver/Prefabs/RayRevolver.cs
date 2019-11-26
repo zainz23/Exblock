@@ -16,9 +16,12 @@ namespace Valve.VR.InteractionSystem
         public Rigidbody projectile;
         public float speed = 20;
 
+        private GameObject spawnLocation;
+
         void Start()
         {
             interactable = GetComponent<Interactable>();
+            spawnLocation = transform.GetChild(0).gameObject;
             if (interactable.attachedToHand)
             {
                 // Depending on which hand we are using...
@@ -29,8 +32,8 @@ namespace Valve.VR.InteractionSystem
         
         void Fire(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
-            Rigidbody instantiatedProjectile = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
-            instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+            Rigidbody instantiatedProjectile = Instantiate(projectile, spawnLocation.transform.position, spawnLocation.transform.rotation) as Rigidbody;
+            instantiatedProjectile.velocity = spawnLocation.transform.TransformDirection(new Vector3(0, 0, speed));
         }
 
         void OnDestroy()

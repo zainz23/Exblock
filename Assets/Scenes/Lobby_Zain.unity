@@ -240,6 +240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6409573784387824989, guid: 0e77daf735ab6b747aabce0358e126ab,
+        type: 3}
+      propertyPath: m_TagString
+      value: grayCube
+      objectReference: {fileID: 0}
     - target: {fileID: 333342611467579348, guid: 0e77daf735ab6b747aabce0358e126ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -909,7 +914,7 @@ MonoBehaviour:
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
-  setRangeOfMotionOnPickup: -1
+  setRangeOfMotionOnPickup: 0
   useHandObjectAttachmentPoint: 1
   attachEaseIn: 0
   snapAttachEaseInCurve:
@@ -950,7 +955,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437100670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.58, z: -3}
+  m_LocalPosition: {x: 0, y: 1.667, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479082224}
@@ -2060,6 +2065,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6409573784387824989, guid: 0e77daf735ab6b747aabce0358e126ab,
+        type: 3}
+      propertyPath: m_TagString
+      value: grayCube
+      objectReference: {fileID: 0}
     - target: {fileID: 333342611467579348, guid: 0e77daf735ab6b747aabce0358e126ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2614,6 +2624,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6409573784387824989, guid: 0e77daf735ab6b747aabce0358e126ab,
+        type: 3}
+      propertyPath: m_TagString
+      value: grayCube
+      objectReference: {fileID: 0}
     - target: {fileID: 333342611467579348, guid: 0e77daf735ab6b747aabce0358e126ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2674,6 +2689,11 @@ PrefabInstance:
       propertyPath: lifetime
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 7768818311158506860, guid: 0e77daf735ab6b747aabce0358e126ab,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e77daf735ab6b747aabce0358e126ab, type: 3}
 --- !u!1 &1591563799 stripped
@@ -2705,6 +2725,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409573784387824989, guid: 0e77daf735ab6b747aabce0358e126ab,
+        type: 3}
+      propertyPath: m_TagString
+      value: grayCube
       objectReference: {fileID: 0}
     - target: {fileID: 333342611467579348, guid: 0e77daf735ab6b747aabce0358e126ab,
         type: 3}
@@ -2966,6 +2991,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6409573784387824989, guid: 0e77daf735ab6b747aabce0358e126ab,
+        type: 3}
+      propertyPath: m_TagString
+      value: grayCube
+      objectReference: {fileID: 0}
     - target: {fileID: 333342611467579348, guid: 0e77daf735ab6b747aabce0358e126ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3039,6 +3069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409573784387824989, guid: 0e77daf735ab6b747aabce0358e126ab,
+        type: 3}
+      propertyPath: m_TagString
+      value: grayCube
       objectReference: {fileID: 0}
     - target: {fileID: 333342611467579348, guid: 0e77daf735ab6b747aabce0358e126ab,
         type: 3}
