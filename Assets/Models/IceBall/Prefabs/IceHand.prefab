@@ -345,6 +345,8 @@ GameObject:
   - component: {fileID: 2209337085152148974}
   - component: {fileID: 2209337085152148975}
   - component: {fileID: 2209337085152148972}
+  - component: {fileID: -1756797929431544127}
+  - component: {fileID: 311348979960047514}
   m_Layer: 0
   m_Name: IceHand
   m_TagString: Untagged
@@ -5255,6 +5257,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportAllowed: 1
   overrideHoverLock: 1
+--- !u!114 &-1756797929431544127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209337085152148983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec00e1f1935b4e94dbb3b05d0b245b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6105114627614831556, guid: 34a4c8a760941ea43a4592556f469e7b, type: 3}
+  attachPoint: {fileID: 311348979960047514}
+  speedOffset: 2
+  spawn:
+    actionPath: /actions/weapons/in/fire
+    needsReinit: 0
+  trackedObj: {fileID: 0}
+--- !u!54 &311348979960047514
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209337085152148983}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2209337085165810872
 GameObject:
   m_ObjectHideFlags: 0

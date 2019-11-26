@@ -8,15 +8,17 @@ namespace Valve.VR.InteractionSystem
     {
         public GameObject prefab;       // The thing we are poofing up
         public Rigidbody attachPoint;   // Used for velocity calculations
+        public float speedOffset;       // Adjustable speed setting
 
         public SteamVR_Action_Boolean spawn;
 
-        SteamVR_Behaviour_Pose trackedObj;
+        private SteamVR_Behaviour_Pose trackedObj;
         FixedJoint joint;
 
-        private void Awake()
+        private void Start()
         {
-            trackedObj = GetComponent<SteamVR_Behaviour_Pose>();
+            // Uses transform of controller
+            trackedObj = transform.parent.GetComponent<SteamVR_Behaviour_Pose>();
         }
 
         private void FixedUpdate()
@@ -41,7 +43,7 @@ namespace Valve.VR.InteractionSystem
                 Transform origin = trackedObj.origin ? trackedObj.origin : trackedObj.transform.parent;
                 if (origin != null)
                 {
-                    rigidbody.velocity = origin.TransformVector(trackedObj.GetVelocity());
+                    rigidbody.velocity =  origin.TransformVector(trackedObj.GetVelocity() * speedOffset);
                     rigidbody.angularVelocity = origin.TransformVector(trackedObj.GetAngularVelocity());
                 }
                 else
