@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - redCube
   - grayCube
+  - RayRevolver
   layers:
   - Default
   - TransparentFX
