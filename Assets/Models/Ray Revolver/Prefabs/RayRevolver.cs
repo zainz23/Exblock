@@ -18,6 +18,8 @@ namespace Valve.VR.InteractionSystem
 
         private GameObject spawnLocation;
 
+        static private bool firstTimeGrab = false;     // User can spawn object AFTER picking up magic ball
+
         void Start()
         {
             interactable = GetComponent<Interactable>();
@@ -32,6 +34,12 @@ namespace Valve.VR.InteractionSystem
         
         void Fire(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
+            // Dont spawn if we're using trigger to grab gun
+            if (!firstTimeGrab)
+            {
+                firstTimeGrab = true;
+                return;
+            }
             Rigidbody instantiatedProjectile = Instantiate(projectile, spawnLocation.transform.position, spawnLocation.transform.rotation) as Rigidbody;
             instantiatedProjectile.velocity = spawnLocation.transform.TransformDirection(new Vector3(0, 0, speed));
         }
@@ -39,6 +47,7 @@ namespace Valve.VR.InteractionSystem
         void OnDestroy()
         {
             fire.RemoveOnStateDownListener(Fire, handType);
+            firstTimeGrab = false;  // Reset incase user grabs gun again
         }
     }
 }
