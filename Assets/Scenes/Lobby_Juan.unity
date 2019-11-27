@@ -2279,7 +2279,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1d646aa5207f04ca49cd0a3e2c597b86, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 865bcb47497404962a43513db0793cf4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2714,7 +2714,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609477627}
-  - component: {fileID: 1609477626}
   - component: {fileID: 1609477625}
   m_Layer: 0
   m_Name: testSpawn
@@ -2732,7 +2731,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1609477624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef653a2a89e514a5abee1c13c84bf7be, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   cubes:
@@ -2755,23 +2754,6 @@ MonoBehaviour:
   - 19.234
   - 21.1
   hd: 0
---- !u!114 &1609477626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609477624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e007a23057a447a92cbe83d1cd52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubes:
-  - {fileID: 0}
-  point:
-  - {fileID: 1717158222}
-  beat: 0
 --- !u!4 &1609477627
 Transform:
   m_ObjectHideFlags: 0
