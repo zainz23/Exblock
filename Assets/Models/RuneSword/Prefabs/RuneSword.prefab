@@ -504,6 +504,7 @@ GameObject:
   - component: {fileID: 2255717293350809126}
   - component: {fileID: 5866915465137434688}
   - component: {fileID: 4793701219501866230}
+  - component: {fileID: 4666409864649230566}
   m_Layer: 0
   m_Name: RuneSword
   m_TagString: Untagged
@@ -720,6 +721,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02578688, y: 0.808185, z: 0.1274143}
   m_Center: {x: 0.0005901195, y: 0.59688276, z: 0.0020573363}
+--- !u!114 &4666409864649230566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255717293350774916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d4cc6cf300b3e4bb1411c4e041030c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportAllowed: 1
+  overrideHoverLock: 1
 --- !u!1 &2331461480713232546
 GameObject:
   m_ObjectHideFlags: 0
