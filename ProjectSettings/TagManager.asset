@@ -9,6 +9,8 @@ TagManager:
   - redCube
   - grayCube
   - RayRevolver
+  - RuneShield
+  - RayShield
   layers:
   - Default
   - TransparentFX

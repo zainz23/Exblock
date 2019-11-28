@@ -13,12 +13,23 @@ public class FireBallBehavior : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         bool hitBlock = collision.collider.gameObject.GetComponent<Block>() != null;
-        if (hitBlock && collision.gameObject.tag.Equals("grayCube"))
+        // Ignore collision on shield
+        if (collision.gameObject.tag.Equals("RuneShield") || collision.gameObject.tag.Equals("Player") )
+        {
+            Physics.IgnoreCollision(collision.transform.GetComponent<Collider>(), GetComponent<Collider>());
+        }
+        else if (hitBlock && collision.gameObject.tag.Equals("grayCube"))
         {
             Kill();
             collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
             gameObject.SendMessage("HasAppliedDamage", SendMessageOptions.DontRequireReceiver);
         }
+        else
+        {
+            // Destroy on contact with anything else
+            Destroy(gameObject);
+        }
+
     }
 
     private void Kill()
