@@ -44,11 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: IceHand
-  packageType: 2
+  packageType: 1
   itemPrefab: {fileID: 2209337085152148983, guid: c132ed5db9dfc7443b3829b0065659d7,
     type: 3}
-  otherHandItemPrefab: {fileID: 2209337085152148983, guid: c132ed5db9dfc7443b3829b0065659d7,
-    type: 3}
+  otherHandItemPrefab: {fileID: 0}
   previewPrefab: {fileID: 5546106955283727617, guid: 3b8b4c856a6628a40b276783f9b838a9,
     type: 3}
   fadedPreviewPrefab: {fileID: 718304760271466083, guid: 289a9176c0ccc9346abd1f7ffd51dbb1,

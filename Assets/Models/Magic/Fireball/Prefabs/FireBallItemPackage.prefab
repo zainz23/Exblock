@@ -44,11 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: FireHand
-  packageType: 2
+  packageType: 1
   itemPrefab: {fileID: 2209337085152148983, guid: 852cc889f60a535498dd7b2af1d22b60,
     type: 3}
-  otherHandItemPrefab: {fileID: 2209337085152148983, guid: 852cc889f60a535498dd7b2af1d22b60,
-    type: 3}
+  otherHandItemPrefab: {fileID: 0}
   previewPrefab: {fileID: 5546106955283727617, guid: 5e157a5497f5e0d42904f4e762438052,
     type: 3}
   fadedPreviewPrefab: {fileID: 718304760271466083, guid: c293a41383ac2c545a805b7195641f7e,
