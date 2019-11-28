@@ -11,15 +11,25 @@ public class IceBallBehavior : MonoBehaviour
     // Particle
     public GameObject explosionPrefab;  // Which is a child object of the ball effect
 
+    // List of tags to ignore colliding with
+    string[] ignoreList = { "RayRevolver", "RuneShield", "RuneHammer", "RuneSword", "FireBall", "Player" };
+
     private void OnCollisionEnter(Collision collision)
     {
         bool hitBlock = collision.collider.gameObject.GetComponent<Block>() != null;
-        // Ignore collision on shield or player
-        if (collision.gameObject.tag.Equals("RuneShield") || collision.gameObject.tag.Equals("Player") )
+
+        // Iterate through collision list and ignore colliding..
+        for (int i = 0; i < ignoreList.Length; i++)
         {
-            Physics.IgnoreCollision(collision.transform.GetComponent<Collider>(), GetComponent<Collider>());
+            if (collision.gameObject.tag.Equals(ignoreList[i] ) )
+            {
+                Physics.IgnoreCollision(collision.transform.GetComponent<Collider>(), GetComponent<Collider>());
+                return;
+            }
         }
-        else if (hitBlock && collision.gameObject.tag.Equals("grayCube") )
+
+        // Collides with block
+        if (hitBlock && collision.gameObject.tag.Equals("grayCube") )
         {
             Kill();
             collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);

@@ -5260,7 +5260,7 @@ GameObject:
   - component: {fileID: 4666409864649230566}
   m_Layer: 0
   m_Name: RuneSword
-  m_TagString: Untagged
+  m_TagString: RuneSword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

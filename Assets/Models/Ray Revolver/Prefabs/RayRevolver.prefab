@@ -2755,7 +2755,7 @@ GameObject:
   - component: {fileID: 4935525417846843461}
   m_Layer: 0
   m_Name: RayRevolver
-  m_TagString: Untagged
+  m_TagString: RayRevolver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

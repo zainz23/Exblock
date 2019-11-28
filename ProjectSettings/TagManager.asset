@@ -10,7 +10,10 @@ TagManager:
   - grayCube
   - RayRevolver
   - RuneShield
-  - RayShield
+  - RuneSword
+  - RuneHammer
+  - IceBall
+  - FireBall
   layers:
   - Default
   - TransparentFX
