@@ -20,6 +20,7 @@ TagManager:
   - Layer1
   - Layer2
   - Layer3
+  - staticCube
   layers:
   - Default
   - TransparentFX
