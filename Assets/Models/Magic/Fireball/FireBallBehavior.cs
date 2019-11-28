@@ -11,7 +11,7 @@ public class FireBallBehavior : MonoBehaviour
     public GameObject explosionPrefab;  // Which is a child object of the ball effect
 
     // List of tags to ignore colliding with
-    string[] ignoreList = { "RayRevolver", "RuneShield", "RuneHammer", "RuneSword", "IceBall", "Player" };
+    string[] ignoreList = { "RayRevolver", "RuneShield", "RuneHammer", "RuneSword", "IceBall", "Player", "LeftHand", "RightHand" };
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -36,6 +36,7 @@ public class FireBallBehavior : MonoBehaviour
         }
         else
         {
+            collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
             // Destroy on contact with anything else
             Destroy(gameObject);
         }
