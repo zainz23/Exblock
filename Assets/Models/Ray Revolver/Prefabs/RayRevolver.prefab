@@ -2748,11 +2748,11 @@ GameObject:
   - component: {fileID: 4994008075955657174}
   - component: {fileID: 4904965476569253834}
   - component: {fileID: 4990113866335358173}
+  - component: {fileID: -4231755953474076059}
   - component: {fileID: 4990113866335358175}
   - component: {fileID: 6437768311320638832}
   - component: {fileID: 4990113866335358174}
   - component: {fileID: 4935525417846843461}
-  - component: {fileID: -4231755953474076059}
   m_Layer: 0
   m_Name: RayRevolver
   m_TagString: Untagged
@@ -2816,6 +2816,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4231755953474076059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4991113866799886360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d321a1daf31944ca1e9eaff20455d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4990113866335358175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2928,18 +2940,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPackage: {fileID: 1400609548263775070, guid: aa55b84fec21d9146beb2192177851b6,
     type: 3}
---- !u!114 &-4231755953474076059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4991113866799886360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d321a1daf31944ca1e9eaff20455d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4991113867081608096
 GameObject:
   m_ObjectHideFlags: 0
