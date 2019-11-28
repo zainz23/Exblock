@@ -16,6 +16,10 @@ TagManager:
   - FireBall
   - LeftHand
   - RightHand
+  - normalCube
+  - Layer1
+  - Layer2
+  - Layer3
   layers:
   - Default
   - TransparentFX
@@ -25,9 +29,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Layer1
+  - Layer2
+  - Layer3
   - 
   - 
   - 

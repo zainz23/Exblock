@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class sp : MonoBehaviour
 {
-    public GameObject[] cubes;
-    public Transform[] point;
-    public float beat;
-    private float timer;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +15,6 @@ public class sp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > beat)
-        {
-            GameObject cube = Instantiate(cubes[Random.Range(0, 2)], point[Random.Range(0, 4)]);
-            cube.transform.localPosition = Vector3.zero;
-            //cube.transform.Rotate()
-            timer -= beat;
-        }
-
-        timer += Time.deltaTime;
+   
     }
 }

@@ -9,13 +9,15 @@ public class cube : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Time.deltaTime * transform.forward * -2;
+ 
+        if(gameObject.name != "static")
+            transform.position += Time.deltaTime * transform.forward * 2;
 
         //Transform bullet = Instantiate(bulletPrefab) as Transform;
         //Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponent<Collider>());
