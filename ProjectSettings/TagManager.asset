@@ -21,6 +21,9 @@ TagManager:
   - Layer2
   - Layer3
   - staticCube
+  - runeCube
+  - yellowCube
+  - blueCube
   layers:
   - Default
   - TransparentFX
