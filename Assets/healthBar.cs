@@ -11,6 +11,7 @@ public class healthBar : MonoBehaviour
     public Material yellowLife;
     public Material redLife;
 
+    public GameObject gameOverText;
     public float total;
     // Start is called before the first frame update
     void Start()
@@ -22,21 +23,25 @@ public class healthBar : MonoBehaviour
     public void reduceLife()
     {
         lifeScalez -= lifeSubtructScaleZ;
-      if(lifeScalez > 0.0f)
-        transform.localScale = new Vector3(transform.localScale.x, lifeScalez, transform.localScale.z);
-     
-        
-        if ( total * 0.70f < lifeScalez)
+        if (lifeScalez > 0.0f)
+            transform.localScale = new Vector3(transform.localScale.x, lifeScalez, transform.localScale.z);
+
+
+        if (total * 0.70f < lifeScalez)
             gameObject.GetComponent<Renderer>().material = greenLife;
-                
-        else if (total * 0.30f < lifeScalez )
+
+        else if (total * 0.30f < lifeScalez)
             gameObject.GetComponent<Renderer>().material = yellowLife;
 
         else
             gameObject.GetComponent<Renderer>().material = redLife;
 
-        
 
+        if(lifeScalez < 0.0f)
+        {
+            gameOverText.SetActive(true);
+
+        }
     }
     // Update is called once per frame
     void Update()

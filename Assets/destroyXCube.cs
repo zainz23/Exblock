@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Valve.VR.InteractionSystem
 {
-    public class destroyIce : MonoBehaviour
+    public class destroyXCube : MonoBehaviour
     {
         public GameObject scoreText;
         public GameObject cube;
@@ -39,4 +39,3 @@ namespace Valve.VR.InteractionSystem
         }
     }
 }
-  
