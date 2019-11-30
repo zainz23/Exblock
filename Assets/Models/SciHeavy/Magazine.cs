@@ -10,11 +10,21 @@ public class Magazine : MonoBehaviour
     //  We check this to make sure user doesn't use same mag
     //    to reload
     public bool hasThrown = false;
+    [Tooltip("Attach this to empty_mag in INSPECTOR not prefabs folder")]
     public GameObject emptySocket;
 
     private AudioSource audioSource;
     public AudioClip magDumpSound;
     public AudioClip magLoadSound;
+
+    public enum GunType
+    {
+        SciHeavy,
+        SciPistol,
+        SciRifle,
+        SciSniper
+    }
+    public GunType prefabTag = GunType.SciHeavy;    // Default
 
     private void Start()
     {
@@ -53,6 +63,21 @@ public class Magazine : MonoBehaviour
     // Used when mag is grabbed/picked up
     void ZeroAmmo()
     {
-        Ammo.ammoSciHeavy = 0;
+        switch (prefabTag.ToString() )
+        {
+            case "SciHeavy":
+                Ammo.ammoSciHeavy = 0;
+                break;
+            case "SciPistol":
+                Ammo.ammoSciPistol = 0;
+                break;
+            case "SciRifle":
+                Ammo.ammoSciRifle = 0;
+                break;
+            case "SciSniper":
+                Ammo.ammoSciSniper = 0;
+                break;
+        }
+        
     }
 }

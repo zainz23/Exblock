@@ -10,12 +10,22 @@ using UnityEngine;
 public class EmptySocket : MonoBehaviour
 {
 
+    [Tooltip("Attach this to mag in INSPECTOR not prefab folder")]
     public GameObject mag;              // PREFAB of the gun mag (not the instantiated instance)
     private GameObject cloneMag;        // Create new instance
 
     private GameObject spawnLocation;   // Location of the mag for this gun
 
     private AudioSource audioSource;
+
+    public enum GunType
+    {
+        SciHeavy,
+        SciPistol,
+        SciRifle,
+        SciSniper 
+    }
+    public GunType prefabTag = GunType.SciHeavy;    // Default
 
     private void Start()
     {
@@ -25,7 +35,12 @@ public class EmptySocket : MonoBehaviour
     {
         if (collider.GetComponent<Magazine>() != null && collider.GetComponent<Magazine>().hasThrown == false)
         {
-            spawnLocation = transform.parent.GetChild(0).gameObject;
+            // Must match ammo type
+            if (collider.GetComponent<Magazine>().prefabTag.ToString() != prefabTag.ToString() )
+            {
+                return;
+            }
+                spawnLocation = transform.parent.GetChild(0).gameObject;
             // We begin instantiating a new mag that takes the place of the old "destroyed" mag
             cloneMag = Instantiate(mag, spawnLocation.transform.position, spawnLocation.transform.rotation);
             // We set Kinematic to true since we only want to worry about physics when we pickup the mag
@@ -41,11 +56,40 @@ public class EmptySocket : MonoBehaviour
             // Send msg to play sound
             cloneMag.SendMessage("PlayMagLoad");
             // Gun is now loaded with a new clip, so lets add ammo!
-            Ammo.ammoSciHeavy += 30;
-            // Normalize the value so we don't overestimate ammo resupply
-            if (Ammo.ammoSciHeavy >= Ammo.maxAmmoSciHeavy)
+            switch(prefabTag.ToString() )
             {
-                Ammo.ammoSciHeavy = 30;
+                case "SciHeavy":
+                    Ammo.ammoSciHeavy += 30;
+                    // Normalize the value so we don't overestimate ammo resupply
+                    if (Ammo.ammoSciHeavy >= Ammo.maxAmmoSciHeavy)
+                    {
+                        Ammo.ammoSciHeavy = 30;
+                    }
+                    break;
+                case "SciPistol":
+                    Ammo.ammoSciPistol += 8;
+                    // Normalize the value so we don't overestimate ammo resupply
+                    if (Ammo.ammoSciPistol >= Ammo.maxAmmoSciPistol)
+                    {
+                        Ammo.ammoSciPistol = 8;
+                    }
+                    break;
+                case "SciRifle":
+                    Ammo.ammoSciRifle += 15;
+                    // Normalize the value so we don't overestimate ammo resupply
+                    if (Ammo.ammoSciRifle >= Ammo.maxAmmoSciRifle)
+                    {
+                        Ammo.ammoSciRifle = 15;
+                    }
+                    break;
+                case "SciSniper":
+                    Ammo.ammoSciSniper += 5;
+                    // Normalize the value so we don't overestimate ammo resupply
+                    if (Ammo.ammoSciSniper >= Ammo.maxAmmoSciSniper)
+                    {
+                        Ammo.ammoSciSniper = 5;
+                    }
+                    break;
             }
             // Turn off empty socket since we are no longer looking for a new magazine in the gun
             gameObject.SetActive(false);
