@@ -12,6 +12,14 @@ public class Magazine : MonoBehaviour
     public bool hasThrown = false;
     public GameObject emptySocket;
 
+    private AudioSource audioSource;
+    public AudioClip magDumpSound;
+    public AudioClip magLoadSound;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     void ThrownMagazine()
     {
         // We are now awaiting a new mag
@@ -20,10 +28,31 @@ public class Magazine : MonoBehaviour
         emptySocket.SetActive(true);
         gameObject.GetComponent<BoxCollider>().enabled = false;
     }
+    void PlayMagDump()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(magDumpSound, 1f);
+    }
+    void PlayMagLoad()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(magLoadSound, 1f);
+    }
     // Function to set thrown status
     //  called by event of throwing weapon
     void SetThrown()
     {
         hasThrown = true;
+    }
+
+    void DestroyMag()
+    {
+        Destroy(gameObject, 2f);
+    }
+
+    // Used when mag is grabbed/picked up
+    void ZeroAmmo()
+    {
+        Ammo.ammoSciHeavy = 0;
     }
 }

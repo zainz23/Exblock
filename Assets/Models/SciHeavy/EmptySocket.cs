@@ -15,6 +15,12 @@ public class EmptySocket : MonoBehaviour
 
     private GameObject spawnLocation;   // Location of the mag for this gun
 
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     void OnTriggerEnter(Collider collider)
     {
         if (collider.GetComponent<Magazine>() != null && collider.GetComponent<Magazine>().hasThrown == false)
@@ -32,6 +38,15 @@ public class EmptySocket : MonoBehaviour
             Destroy(collider.gameObject);
             // Now that it's destroyed, lets turn on the new mag we had ready
             cloneMag.SetActive(true);
+            // Send msg to play sound
+            cloneMag.SendMessage("PlayMagLoad");
+            // Gun is now loaded with a new clip, so lets add ammo!
+            Ammo.ammoSciHeavy += 30;
+            // Normalize the value so we don't overestimate ammo resupply
+            if (Ammo.ammoSciHeavy >= Ammo.maxAmmoSciHeavy)
+            {
+                Ammo.ammoSciHeavy = 30;
+            }
             // Turn off empty socket since we are no longer looking for a new magazine in the gun
             gameObject.SetActive(false);
         }
