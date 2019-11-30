@@ -12,6 +12,8 @@ public class healthBar : MonoBehaviour
     public Material redLife;
 
     public GameObject gameOverText;
+    public GameObject spawning;
+    public AudioSource gameOverSound;
     public float total;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,8 @@ public class healthBar : MonoBehaviour
         if(lifeScalez < 0.0f)
         {
             gameOverText.SetActive(true);
+            spawning.SetActive(false);
+            gameOverSound.Play();
 
         }
     }

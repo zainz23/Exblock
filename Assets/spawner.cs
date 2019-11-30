@@ -15,15 +15,16 @@ public class spawner : MonoBehaviour
     private float hd = 0.0f;
 
     public List<GameObject>  twoCubes;
-    public bool secondWave = false;
+    public bool secondWave ;
 
     public GameObject message;
     // Start is called before the first frame update
     void Start()
     {
+
         //audioData = GetComponent<AudioSource>();
         //audioData.Play(0);
-
+        secondWave = false;
         foreach (float x in floatArray)
         {
             myStack.Enqueue(x);
@@ -33,22 +34,24 @@ public class spawner : MonoBehaviour
         changeTo("yellowCube", "blueCube");
 
      }
-    private int prev = 0;
-    private int curr = 0;
+        private int prev = 0;
+        private int curr = 0;
    
     void changeTo(string cube1, string cube2)
     {
 
-        for(int i = 0; i < twoCubes.Count; i++)
-            twoCubes.RemoveAt(0);
-                
-        foreach( GameObject x in cubes)
+             twoCubes = new List<GameObject>();
+
+
+
+
+        foreach ( GameObject x in cubes)
         {
 
             if (x.tag.Equals(cube1) || x.tag.Equals(cube2))
             {
                  twoCubes.Add(x);
-               
+                Debug.Log("found");
             }
         }
     }
@@ -57,17 +60,22 @@ public class spawner : MonoBehaviour
     {
         if (timer > hd)
         {
-            if(timer > 36.5f)
+            Debug.Log("this is the time: " + timer);
+
+            if (timer > 25.70f && !secondWave)
+            {
+                secondWave = true;
+                changeTo("redCube", "grayCube");
+                message.SetActive(true);
+            }
+
+            if (timer > 35.5f)
             {
                 message.SetActive(false);
 
 
             }
-            else if(timer > 25.0f && !secondWave)
-            {
-                changeTo("redCube", "grayCube");
-                message.SetActive(true);
-            }
+             
 
             curr = Random.Range(0, point.Length);
             if (curr == prev)
@@ -92,7 +100,6 @@ public class spawner : MonoBehaviour
             //    timer -= 1.5f;
             hd = (float)myStack.Dequeue();
         }
-        Debug.Log("this is the time: " + point.Length);
         //timer
         timer += (Time.deltaTime);
     }
