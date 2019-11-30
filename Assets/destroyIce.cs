@@ -22,7 +22,6 @@ namespace Valve.VR.InteractionSystem
                 collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
 
                 gameObject.SendMessage("HasAppliedDamage", SendMessageOptions.DontRequireReceiver);
-                scoreText.GetComponent<UnityEngine.UI.Text>().text = "Score: " + 100;
 
 
             }

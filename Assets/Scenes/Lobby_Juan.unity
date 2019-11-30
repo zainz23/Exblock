@@ -2786,7 +2786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bb7e16d90ac5b4aade2b1a67d8952c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1153506676}
+  scoreText: {fileID: 2116541117}
 --- !u!1 &561148628
 GameObject:
   m_ObjectHideFlags: 0
@@ -4731,12 +4731,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1153506676 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9115512978623243735, guid: 322b9786b660bf44aa85f0e6e8ec1bba,
-    type: 3}
-  m_PrefabInstance: {fileID: 1455138435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1228712415
 GameObject:
   m_ObjectHideFlags: 0
@@ -6832,6 +6826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74361b3a2d7b9d4eb78965677f641fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  total: 10
 --- !u!1 &2119855317
 GameObject:
   m_ObjectHideFlags: 0
