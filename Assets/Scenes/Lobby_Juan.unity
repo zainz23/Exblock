@@ -1371,7 +1371,7 @@ GameObject:
   - component: {fileID: 397529847}
   - component: {fileID: 397529846}
   - component: {fileID: 397529853}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: testWeapon2
   m_TagString: test
   m_Icon: {fileID: 0}
@@ -2262,7 +2262,7 @@ GameObject:
   - component: {fileID: 551974711}
   - component: {fileID: 551974710}
   - component: {fileID: 551974717}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: testWeapon1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
