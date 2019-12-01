@@ -5255,9 +5255,9 @@ GameObject:
   - component: {fileID: 2255717293350809563}
   - component: {fileID: 2255717293350809560}
   - component: {fileID: 2255717293350809561}
-  - component: {fileID: 5866915465137434688}
   - component: {fileID: 4793701219501866230}
   - component: {fileID: 4666409864649230566}
+  - component: {fileID: -2064529488403143325}
   m_Layer: 0
   m_Name: RuneSword
   m_TagString: RuneSword
@@ -5451,18 +5451,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPackage: {fileID: 7463828078291489461, guid: 706ebb4592247c74bb4b8f8bd5384831,
     type: 3}
---- !u!114 &5866915465137434688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2255717293350774916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80324475a3bf56a4c9ef0c1760d2af7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &4793701219501866230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5490,6 +5478,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportAllowed: 1
   overrideHoverLock: 1
+--- !u!114 &-2064529488403143325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255717293350774916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d234c3fec20c740ae1948f1ce49282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1933820840866141466, guid: 1a10764259bc97c43ba3291856ebd2ef,
+    type: 3}
+  cube: {fileID: 1879324356136135699, guid: 79eef764184c6134db09f9e5054d91e6, type: 3}
 --- !u!1 &2331461480713232546
 GameObject:
   m_ObjectHideFlags: 0
