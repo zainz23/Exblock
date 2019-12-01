@@ -16,19 +16,20 @@ public class spawner : MonoBehaviour
     public List<GameObject>  twoCubes;
     public bool secondWave ;
 
-    private float[] floatArray;
-    public string rawData;
+     public string rawData;
     public float secondWaveTime;
+    public bool[] staticBlocks = new bool[10] ;
 
     public GameObject message;
     // Start is called before the first frame update
     void Start()
     {
 
+        staticBlocks[2] = true;
+        staticBlocks[7] = true;
 
         string[] spawns = rawData.Split(',');
-        floatArray = new float[spawns.Length];
-        foreach (string x in spawns)
+         foreach (string x in spawns)
         {
             Debug.Log(x);
             myStack.Enqueue(float.Parse(x));
@@ -100,7 +101,7 @@ public class spawner : MonoBehaviour
 
             GameObject cube = Instantiate(twoCubes[Random.Range(0, 2)], point[curr]);
           
-            if(curr == 2 || curr == 7)//for 3 & 8. we start from 0
+            if(staticBlocks[curr])//for 3 & 8. we start from 0
                 cube.name = "static";
 
             cube.transform.localPosition = Vector3.zero;
