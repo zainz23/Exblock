@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5205046945671636664}
   - component: {fileID: 5205046945671636663}
   - component: {fileID: 8719088699274254846}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PickUpSciPistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   requireGrabActionToTake: 1
   requireReleaseActionToReturn: 0
   showTriggerHint: 0
-  attachmentFlags: 63
+  attachmentFlags: 47
   takeBackItem: 1
   acceptDifferentItems: 0
   pickupEvent:
@@ -162,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: modelPreview
       objectReference: {fileID: 0}
+    - target: {fileID: 1925089141194037875, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1925089141194037869, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,6 +221,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925089141592269220, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925089140928907127, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925089140854483710, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925089140822365963, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925089140788163549, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925089140175589982, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925089140023621654, guid: fa05c5ed9f43c664daf7bf02ff002f0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa05c5ed9f43c664daf7bf02ff002f0c, type: 3}

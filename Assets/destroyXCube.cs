@@ -3,38 +3,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script can be attached to any weapon
+//      Change the cubeToDestroy to set what the weapon can destroy
 namespace Valve.VR.InteractionSystem
 {
     public class destroyXCube : MonoBehaviour
     {
-        public GameObject scoreText;
-        public GameObject cube;
+        // Enumerated list of balls that can be destroyed
+        // This can be changed in the inspector
+        public enum TagList
+        {
+            rockBall,
+            lavaBall,
+            groundBall,
+            waterBall,
+            runeCube
+        }
+        [Tooltip("What do you want this weapon to destroy?")]
+        public TagList cubeToDestroy = TagList.rockBall;    // Default
+
+        [Tooltip("Should this object be destroyed on collision?")]
+        public bool destroySelf;
+
         void OnCollisionEnter(Collision collision)
         {
-
-            Rigidbody rb = GetComponent<Rigidbody>();
-            float rbSpeed = rb.velocity.sqrMagnitude;
+            // Boolean to see if player hit a block/ball
             bool hitBlock = collision.collider.gameObject.GetComponent<Block>() != null;
-
-            // Only count collisions with good speed so that stationary swords without momentum can't deal damage
-            // always break blocks
-            if (rbSpeed > 0.1f || hitBlock && collision.gameObject.tag.Equals(cube.gameObject.tag))
+            // Check if player has hit the correct block with the correct weapon
+            if (hitBlock && collision.collider.gameObject.tag == cubeToDestroy.ToString())
             {
                 collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
-
+                ScoreText.score += 10;
                 gameObject.SendMessage("HasAppliedDamage", SendMessageOptions.DontRequireReceiver);
-
-                scoreText.GetComponent<scoreText>().updateText();
-
-
+                if (destroySelf)
+                {
+                    Destroy(gameObject);
+                }
             }
-            else
+            // Check if they hit a block with the wrong weapon
+            else if (hitBlock)
             {
+                // Destroy the incorrect block
                 collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
-
-                GameObject.Find("healthBar").GetComponent<healthBar>().reduceLife();
-
+                if (GameObject.Find("healthBar") )
+                {
+                    // Player takes damage
+                    GameObject.Find("healthBar").GetComponent<healthBar>().reduceLife(1);
+                }
+                // Sould we destroy this object?
+                if (destroySelf)
+                {
+                    Destroy(gameObject);
+                }
+                
             }
+            
 
         }
     }

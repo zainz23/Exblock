@@ -28,7 +28,7 @@ public class cube : MonoBehaviour
 */
         if (gameObject.name != "static")
         {
-            transform.position += Time.deltaTime * transform.forward * 2;
+            transform.position += Time.deltaTime * transform.forward * 0.75f;
 
         }
 

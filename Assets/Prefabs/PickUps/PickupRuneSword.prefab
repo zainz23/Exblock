@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1283220823741744371}
   - component: {fileID: 1283220823741744380}
   - component: {fileID: 1283220823741744381}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PickupRuneSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   requireGrabActionToTake: 1
   requireReleaseActionToReturn: 0
   showTriggerHint: 1
-  attachmentFlags: -23
+  attachmentFlags: 47
   takeBackItem: 1
   acceptDifferentItems: 0
   pickupEvent:
@@ -137,6 +137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: modelPreview
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295217464832042882, guid: 3800cf15e7e6c6244aea2d82d24152e9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7295217464832277410, guid: 3800cf15e7e6c6244aea2d82d24152e9,
         type: 3}

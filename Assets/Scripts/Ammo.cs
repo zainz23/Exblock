@@ -20,4 +20,12 @@ public class Ammo : MonoBehaviour
     static public int ammoSciSniper = 5;
     static public int maxAmmoSciSniper = 5;
 
+    public static void ResetAmmo()
+    {
+        ammoSciHeavy = maxAmmoSciHeavy;
+        ammoSciPistol = maxAmmoSciPistol;
+        ammoSciRifle = maxAmmoSciRifle;
+        ammoSciSniper = maxAmmoSciSniper;
+    }
+
 }

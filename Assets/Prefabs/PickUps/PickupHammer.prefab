@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4607040576907217342}
   - component: {fileID: 4607040576907217339}
   - component: {fileID: 4607040576907217343}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PickupHammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ MonoBehaviour:
   requireGrabActionToTake: 1
   requireReleaseActionToReturn: 0
   showTriggerHint: 1
-  attachmentFlags: -23
+  attachmentFlags: 47
   takeBackItem: 1
   acceptDifferentItems: 0
   pickupEvent:
@@ -151,6 +151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: modelPreview
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389611346626603994, guid: fa66b96a5d1f1f245bb08a037ac2d441,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4389611346626639866, guid: fa66b96a5d1f1f245bb08a037ac2d441,
         type: 3}

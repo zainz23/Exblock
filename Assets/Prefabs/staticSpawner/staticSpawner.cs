@@ -12,16 +12,18 @@ public class staticSpawner : MonoBehaviour
     public Material[] materials;
     public enum TagList
     {
-        blueCube,
-        yellowCube,
-        redCube,
-        grayCube,
+        waterBall,
+        rockBall,
+        groundBall,
+        lavaBall,
         runeCube
     }
     public float spawnTimer = 1f;   // How soon a respawn occurs after destruction
     public GameObject prefab;       // Prefab we are instantiating...
-    public TagList prefabTag = TagList.redCube;   // Tag of the block we're spawning (redCube,gray, etc.)
+    public TagList prefabTag = TagList.waterBall;   // Tag of the block we're spawning (redCube,gray, etc.)
     private Material mat;
+
+    public bool isStatic;
 
     private GameObject clone;       // Instantiated clone of prefab
     // Start is called before the first frame update
@@ -48,6 +50,8 @@ public class staticSpawner : MonoBehaviour
             {
                 // Instantiate a new one
                 clone = Instantiate(prefab, transform.position, transform.rotation);
+                if (isStatic)//for 3 & 8. we start from 0
+                    clone.name = "static";
                 clone.GetComponent<Renderer>().material = mat;
                 clone.tag= prefabTag.ToString();
             }

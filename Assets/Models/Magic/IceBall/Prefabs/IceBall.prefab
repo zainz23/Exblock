@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 6105114627614831553}
   - component: {fileID: 6105114627614831554}
   - component: {fileID: 6105114627614831555}
-  - component: {fileID: 536848388248947614}
-  m_Layer: 0
+  - component: {fileID: -3977740664846338704}
+  m_Layer: 11
   m_Name: IceBall
   m_TagString: IceBall
   m_Icon: {fileID: 0}
@@ -4833,7 +4833,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &536848388248947614
+--- !u!114 &-3977740664846338704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4842,8 +4842,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6105114627614831556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575c3a69f39a8204f85e1a647ddfd53e, type: 3}
+  m_Script: {fileID: 11500000, guid: c5d234c3fec20c740ae1948f1ce49282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 5209153608967993647, guid: 21ecf1c34594ae043bfe5709878ff5dd,
-    type: 3}
+  cubeToDestroy: 3
+  destroySelf: 1

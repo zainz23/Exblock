@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
-  - {fileID: 2100000, guid: 65612210f97d31e42a03c0d4f95b1e3e, type: 2}
-  - {fileID: 2100000, guid: b07652774f9ccac40a1c9e4288caf8c8, type: 2}
+  - {fileID: 2100000, guid: 42e26e838cb21e944aa7de2aae4edefc, type: 2}
+  - {fileID: 2100000, guid: a74e88492fa30e540a88a0a28e6dd93c, type: 2}
   - {fileID: 2100000, guid: e3c0b7684cbd59e4f823ad029f55d1ed, type: 2}
-  - {fileID: 2100000, guid: ffef8790a95c04d038b6f76a5ea76a54, type: 2}
-  - {fileID: 2100000, guid: 4b7edbed9ffb043d2a3fadeff682776e, type: 2}
+  - {fileID: 2100000, guid: 5674184a87d87e54ca8047426601a57b, type: 2}
+  - {fileID: 2100000, guid: 36508c771463abf43b7135d9539897e7, type: 2}
   spawnTimer: 1
   prefab: {fileID: 6409573784387824989, guid: 0e77daf735ab6b747aabce0358e126ab, type: 3}
   prefabTag: 0

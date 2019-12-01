@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2531137176706944197}
   - component: {fileID: 2523840490968375107}
   - component: {fileID: 7122091695409524867}
-  - component: {fileID: 3789612839743098510}
   - component: {fileID: 7194978357842163732}
   - component: {fileID: -2460267240672211389}
+  - component: {fileID: 5706539492394740002}
   m_Layer: 0
   m_Name: P_Bullet
   m_TagString: Untagged
@@ -98,19 +98,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3789612839743098510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2544848812825906107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2753c0850a008764994abacaeb355e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collideTag: 2
 --- !u!65 &7194978357842163732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -229,3 +216,17 @@ TrailRenderer:
   m_MinVertexDistance: 0.15
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &5706539492394740002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544848812825906107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d234c3fec20c740ae1948f1ce49282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeToDestroy: 2
+  destroySelf: 1

@@ -1487,8 +1487,8 @@ GameObject:
   - component: {fileID: 5760581056437062034}
   - component: {fileID: 5760581056437062035}
   - component: {fileID: 5760581056437062060}
-  - component: {fileID: -3245525179019023921}
   - component: {fileID: -5372591245748372084}
+  - component: {fileID: 3621407983010758053}
   m_Layer: 0
   m_Name: RuneHammer
   m_TagString: RuneHammer
@@ -1719,18 +1719,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPackage: {fileID: 8474052831890187221, guid: 7f5fe2fceca212f45bc5d61c0b060c64,
     type: 3}
---- !u!114 &-3245525179019023921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5760581056437096207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc87d2dbc454a4a488967069fccfc7d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-5372591245748372084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,6 +1733,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportAllowed: 1
   overrideHoverLock: 1
+--- !u!114 &3621407983010758053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760581056437096207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d234c3fec20c740ae1948f1ce49282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeToDestroy: 4
+  destroySelf: 0
 --- !u!1 &5879770547577827600
 GameObject:
   m_ObjectHideFlags: 0

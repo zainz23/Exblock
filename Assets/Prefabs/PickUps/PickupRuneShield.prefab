@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7780484369739121293}
   - component: {fileID: 7780484369739121290}
   - component: {fileID: 7780484369739121291}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PickupRuneShield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   requireGrabActionToTake: 1
   requireReleaseActionToReturn: 0
   showTriggerHint: 1
-  attachmentFlags: -23
+  attachmentFlags: 47
   takeBackItem: 1
   acceptDifferentItems: 0
   pickupEvent:
@@ -137,6 +137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: modelPreview
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177041818742015170, guid: 3394621437fea3a4ea403a56e8004782,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4177041818742315234, guid: 3394621437fea3a4ea403a56e8004782,
         type: 3}

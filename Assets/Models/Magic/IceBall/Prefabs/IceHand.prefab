@@ -5289,7 +5289,7 @@ MonoBehaviour:
   attachPoint: {fileID: 1881090294279841163}
   speedOffset: 2
   spawn:
-    actionPath: /actions/weapons/in/fire
+    actionPath: /actions/default/in/InteractUI
     needsReinit: 0
 --- !u!1 &2209337085165810872
 GameObject:

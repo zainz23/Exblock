@@ -45,6 +45,10 @@ namespace Valve.VR.InteractionSystem
                 {
                     SpawnParticles(lifetimeEndParticlePrefab, lifetimeEndSound);
                 }
+                if (GameObject.Find("healthBar") )
+                {
+                    GameObject.Find("healthBar").GetComponent<healthBar>().reduceLife(2);
+                }
                 // Object is destroyed
                 Destroy(gameObject);
             }

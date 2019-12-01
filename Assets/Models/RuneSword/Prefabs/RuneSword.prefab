@@ -5490,9 +5490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d234c3fec20c740ae1948f1ce49282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1933820840866141466, guid: 1a10764259bc97c43ba3291856ebd2ef,
-    type: 3}
-  cube: {fileID: 1879324356136135699, guid: 79eef764184c6134db09f9e5054d91e6, type: 3}
+  cubeToDestroy: 4
 --- !u!1 &2331461480713232546
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,9 +22,9 @@ public class healthBar : MonoBehaviour
          lifeSubtructScaleZ = lifeScalez / 10;
         total = lifeScalez;
      }
-    public void reduceLife()
+    public void reduceLife(int amount)
     {
-        lifeScalez -= lifeSubtructScaleZ;
+        lifeScalez -= lifeSubtructScaleZ / amount;
         if (lifeScalez > 0.0f)
             transform.localScale = new Vector3(transform.localScale.x, lifeScalez, transform.localScale.z);
 

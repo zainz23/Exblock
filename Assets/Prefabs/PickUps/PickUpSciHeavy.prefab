@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3145430203812899657}
   - component: {fileID: 3145430203812899654}
   - component: {fileID: 1917045241981785103}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PickUpSciHeavy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   requireGrabActionToTake: 1
   requireReleaseActionToReturn: 0
   showTriggerHint: 0
-  attachmentFlags: 63
+  attachmentFlags: 47
   takeBackItem: 1
   acceptDifferentItems: 0
   pickupEvent:
@@ -165,7 +165,7 @@ PrefabInstance:
     - target: {fileID: 5407189884143437921, guid: 4399abd7a0a11d14fab8639225e7ff5d,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5407189884143437922, guid: 4399abd7a0a11d14fab8639225e7ff5d,
         type: 3}
@@ -222,35 +222,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5407189885561494655, guid: 4399abd7a0a11d14fab8639225e7ff5d,
+    - target: {fileID: 5407189884301284705, guid: 4399abd7a0a11d14fab8639225e7ff5d,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5407189884056283997, guid: 4399abd7a0a11d14fab8639225e7ff5d,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5407189883956078720, guid: 4399abd7a0a11d14fab8639225e7ff5d,
         type: 3}
       propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407189883828689010, guid: 4399abd7a0a11d14fab8639225e7ff5d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407189884301284705, guid: 4399abd7a0a11d14fab8639225e7ff5d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5407189883963682966, guid: 4399abd7a0a11d14fab8639225e7ff5d,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407189883828689010, guid: 4399abd7a0a11d14fab8639225e7ff5d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407189885561494655, guid: 4399abd7a0a11d14fab8639225e7ff5d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4399abd7a0a11d14fab8639225e7ff5d, type: 3}

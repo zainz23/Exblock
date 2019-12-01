@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1339203374057727545}
   - component: {fileID: 1339203374057727543}
   - component: {fileID: 1339203374057727544}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PickUpSciSniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: modelPreview
       objectReference: {fileID: 0}
+    - target: {fileID: 572915141948225546, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6236136160673481360, guid: d5fc165ce47e4d446992d8639c89889f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,6 +221,61 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558197257429561302, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000270442312316962, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826168623020635821, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 936176953233032111, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 988235782007830952, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797226581230926692, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439802936716909342, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963978283769827517, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694072752995546988, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412890633149665799, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449598403717622279, guid: d5fc165ce47e4d446992d8639c89889f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5fc165ce47e4d446992d8639c89889f, type: 3}

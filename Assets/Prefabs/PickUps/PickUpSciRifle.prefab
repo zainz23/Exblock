@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6813233039736208760}
   - component: {fileID: 8772422392718797525}
   - component: {fileID: 7665778169605741705}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PickUpSciRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: modelPreview
       objectReference: {fileID: 0}
+    - target: {fileID: 1870693633653271755, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7752693986591185319, guid: 031431c8ebd67bf4abfa9140c511af7d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,6 +221,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800643942597533012, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107135161736071892, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486071518503862929, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995458514046438346, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093587578333927566, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163734796584851662, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795970610257540893, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110402682080890943, guid: 031431c8ebd67bf4abfa9140c511af7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 031431c8ebd67bf4abfa9140c511af7d, type: 3}

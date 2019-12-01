@@ -1,29 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR.InteractionSystem;
-using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class LevelLoad : MonoBehaviour
 {
-
-    // Scene we want to load
-    public string sceneName;
-    // Start is called before the first frame update
-    void Start()
+    [Tooltip("Scene name to load")]
+    public string levelToLoad;
+    void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-
-        SceneManager.LoadScene(sceneName);
+        // Ignore weapons/bullets
+        if (collision.gameObject.GetComponent("destroyXCube") )
+        {
+            return;
+        }
+        // Reset ammo and score since they are static
+        Ammo.ResetAmmo();
+        ScoreText.score = 0;
+        SteamVR_LoadLevel.Begin(levelToLoad);
     }
 }

@@ -28,6 +28,10 @@ TagManager:
   - healthbar
   - hammer
   - bullet
+  - lavaBall
+  - groundBall
+  - rockBall
+  - waterBall
   layers:
   - Default
   - TransparentFX
@@ -42,7 +46,7 @@ TagManager:
   - Layer3
   - Weap_and_Spawner
   - weapon
-  - 
+  - ball
   - 
   - 
   - 

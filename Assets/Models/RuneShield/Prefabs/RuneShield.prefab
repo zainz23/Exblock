@@ -1232,6 +1232,7 @@ GameObject:
   - component: {fileID: 8060652639034679514}
   - component: {fileID: 8060652639034679513}
   - component: {fileID: 8060652639034679515}
+  - component: {fileID: 1531322979206897290}
   m_Layer: 0
   m_Name: RuneShield
   m_TagString: RuneShield
@@ -1435,6 +1436,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPackage: {fileID: 7807598769399429143, guid: 2e0fe7e64bf0dfa4d992a2be33042617,
     type: 3}
+--- !u!114 &1531322979206897290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8060652639034779239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d234c3fec20c740ae1948f1ce49282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeToDestroy: 0
 --- !u!1 &8862390961385866467
 GameObject:
   m_ObjectHideFlags: 0

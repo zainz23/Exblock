@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3037095743063446354}
   - component: {fileID: 2757448104139001750}
   - component: {fileID: 8315931346248084187}
-  - component: {fileID: -1209384927858401790}
+  - component: {fileID: 5466459151365374316}
   m_Layer: 0
   m_Name: R_Bullet
   m_TagString: Untagged
@@ -216,7 +216,7 @@ TrailRenderer:
   m_MinVertexDistance: 0.15
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &-1209384927858401790
+--- !u!114 &5466459151365374316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,7 +225,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 426693555015565028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2753c0850a008764994abacaeb355e3b, type: 3}
+  m_Script: {fileID: 11500000, guid: c5d234c3fec20c740ae1948f1ce49282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collideTag: 2
+  cubeToDestroy: 2
+  destroySelf: 1
