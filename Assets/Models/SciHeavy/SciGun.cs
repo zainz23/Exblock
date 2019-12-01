@@ -37,8 +37,13 @@ namespace Valve.VR.InteractionSystem
         }
         public GunType prefabTag = GunType.SciHeavy;    // Default
 
+        // Gun cooldown before next shot
+        private float cooldown = 0;
+        float timeStamp;
+
         void Start()
         {
+            StartCoroutine(CoolDown());
             audioSource = GetComponent<AudioSource>();
             interactable = GetComponent<Interactable>();
             spawnLocation = transform.GetChild(1).gameObject;
@@ -72,22 +77,34 @@ namespace Valve.VR.InteractionSystem
 
         void Fire(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
-            if (prefabTag.ToString() == "SciHeavy")
+            if (Time.time > timeStamp)
             {
-                AmmoCheck(ref Ammo.ammoSciHeavy);
+                if (prefabTag.ToString() == "SciHeavy")
+                {
+                    cooldown = 0f;
+                    timeStamp = Time.time + cooldown;
+                    AmmoCheck(ref Ammo.ammoSciHeavy);
+                }
+                else if (prefabTag.ToString() == "SciPistol")
+                {
+                    cooldown = 0f;
+                    timeStamp = Time.time + cooldown;
+                    AmmoCheck(ref Ammo.ammoSciPistol);
+                }
+                else if (prefabTag.ToString() == "SciRifle")
+                {
+                    cooldown = .25f;
+                    timeStamp = Time.time + cooldown;
+                    AmmoCheck(ref Ammo.ammoSciRifle);
+                }
+                else if (prefabTag.ToString() == "SciSniper")
+                {
+                    cooldown = 2.5f;
+                    timeStamp = Time.time + cooldown;
+                    AmmoCheck(ref Ammo.ammoSciSniper);
+                }
             }
-            else if (prefabTag.ToString() == "SciPistol")
-            {
-                AmmoCheck(ref Ammo.ammoSciPistol);
-            }
-            else if (prefabTag.ToString() == "SciRifle")
-            {
-                AmmoCheck(ref Ammo.ammoSciRifle);
-            }
-            else if (prefabTag.ToString() == "SciSniper")
-            {
-                AmmoCheck(ref Ammo.ammoSciSniper);
-            }
+
         }
 
         // Changes the passed in ammo parameter
@@ -101,6 +118,8 @@ namespace Valve.VR.InteractionSystem
                 ammo -= 1;
                 // Play gun shot
                 audioSource.PlayOneShot(gunShotSound, 0.25f);
+                CoolDown();
+
             }
             else if (ammo == 0)
             {
@@ -108,9 +127,14 @@ namespace Valve.VR.InteractionSystem
                 audioSource.PlayOneShot(clickSound, 0.5f);
             }
         }
+        IEnumerator CoolDown()
+        {
+            yield return new WaitForSeconds(cooldown);
+        }
 
         void OnDestroy()
         {
+            StopAllCoroutines();
             fire.RemoveOnStateDownListener(Fire, handType);
         }
     }

@@ -40,7 +40,7 @@ public class EmptySocket : MonoBehaviour
             {
                 return;
             }
-                spawnLocation = transform.parent.GetChild(0).gameObject;
+            spawnLocation = transform.parent.GetChild(0).gameObject;
             // We begin instantiating a new mag that takes the place of the old "destroyed" mag
             cloneMag = Instantiate(mag, spawnLocation.transform.position, spawnLocation.transform.rotation);
             // We set Kinematic to true since we only want to worry about physics when we pickup the mag
