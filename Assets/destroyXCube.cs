@@ -9,6 +9,11 @@ namespace Valve.VR.InteractionSystem
     {
         public GameObject scoreText;
         public GameObject cube;
+
+        private void Start()
+        {
+            scoreText = GameObject.Find("scoreText2");
+        }
         void OnCollisionEnter(Collision collision)
         {
 
@@ -22,14 +27,16 @@ namespace Valve.VR.InteractionSystem
             {
                 collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
 
-                ScoreText.total += 10;
                 gameObject.SendMessage("HasAppliedDamage", SendMessageOptions.DontRequireReceiver);
+
+                scoreText.GetComponent<scoreText>().updateText();
 
 
             }
             else
             {
                 collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
+
                 GameObject.Find("healthBar").GetComponent<healthBar>().reduceLife();
 
             }

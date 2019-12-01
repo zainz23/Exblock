@@ -4,8 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - scoreText: {fileID: 1933820840866141466, guid: 1a10764259bc97c43ba3291856ebd2ef,
-      type: 3}
+  - scoreText: {instanceID: 0}
   - cube: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

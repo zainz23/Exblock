@@ -24,8 +24,7 @@ namespace Valve.VR.InteractionSystem
 
                 gameObject.SendMessage("HasAppliedDamage", SendMessageOptions.DontRequireReceiver);
 
-                ScoreText.total += 10;
-
+ 
 
             }
             else

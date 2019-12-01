@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 3535960338894376031}
   - component: {fileID: 3546150849495827781}
   - component: {fileID: 1556808123529155249}
-  - component: {fileID: 7150519187199023273}
   - component: {fileID: 6570962041614241079}
   - component: {fileID: 4166147534627423489}
-  - component: {fileID: -5458700139586794667}
+  - component: {fileID: 639617052903267085}
   m_Layer: 0
   m_Name: S_Bullet
   m_TagString: Untagged
@@ -99,19 +98,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7150519187199023273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3559695085434742915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2753c0850a008764994abacaeb355e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collideTag: 0
 --- !u!65 &6570962041614241079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -230,7 +216,7 @@ TrailRenderer:
   m_MinVertexDistance: 0.15
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &-5458700139586794667
+--- !u!114 &639617052903267085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,6 +228,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d234c3fec20c740ae1948f1ce49282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1933820840866141466, guid: 1a10764259bc97c43ba3291856ebd2ef,
-    type: 3}
-  cube: {fileID: 1879324356136135699, guid: ba28918521b1c58469b97c89e7355b66, type: 3}
+  scoreText: {fileID: 0}
+  cube: {fileID: 0}
