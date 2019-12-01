@@ -24,14 +24,13 @@ namespace Valve.VR.InteractionSystem
 
                 gameObject.SendMessage("HasAppliedDamage", SendMessageOptions.DontRequireReceiver);
 
-                scoreText.GetComponent<scoreText>().updateText();
+                ScoreText.total += 10;
 
 
             }
             else
             {
                 collision.collider.gameObject.SendMessageUpwards("ApplyDamage", SendMessageOptions.DontRequireReceiver);
-
                 GameObject.Find("healthBar").GetComponent<healthBar>().reduceLife();
 
             }
