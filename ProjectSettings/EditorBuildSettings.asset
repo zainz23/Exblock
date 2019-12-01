@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/redRoom.unity
     guid: 9daa175cecbaa0b498710a5d8851083b
+  - enabled: 1
+    path: Assets/Scenes/CastleRaid.unity
+    guid: 18c91977e9858604483a9315c7907a20
   m_configObjects: {}
