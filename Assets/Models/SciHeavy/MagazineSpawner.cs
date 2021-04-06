@@ -25,6 +25,8 @@ public class MagazineSpawner : MonoBehaviour
             {
                 // Instantiate a new one
                 clone = Instantiate(prefab, transform.position, transform.rotation);
+                //Sets "ChoiceButtonHolder" as the new parent of the s1Button.
+                clone.transform.SetParent(gameObject.transform);
             }
             yield return new WaitForSeconds(spawnTimer);
             yield return null;

@@ -1,10 +1,10 @@
 # Exblock
 Unity VR game where you must destroy dynamically moving blocks/objects with the use of magic/guns/swords.
 
-## [DEMO](https://www.youtube.com/watch?v=jrmZopn8tsk&feature=emb_title) 
+## [DEMO](https://www.youtube.com/watch?v=uPymky5tSgo) 
 
 ## How to Install and Run
-1. Make sure you have Unity 2019.2.6f1 installed.
+1. Make sure you have Unity 2020.3.2f1 (LTS) installed.
 2. Clone this repository.
 3. Open Unity. Unity will now import and compile the new files.
 4. Go to “Scenes” folder and load the scene "TargetRange"
@@ -16,6 +16,11 @@ that respawn.
 
 To play our demo level, please locate to the red area all the way in the back right of the
 map (facing the stair case in the beginning). Hit the Castle Raid button to play the level.
+
+## Troubleshooting
+1. Delete the SteamVR folder
+2. Go to the Unity asset store and install a fresh SteamVR package.
+3. Import
 
 # Extras/Tools/Credits
 

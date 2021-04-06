@@ -85,6 +85,8 @@ namespace Valve.VR
             }
         }
 
+        private static bool previewErrorThrown = false;
+
         protected void UpdatePreviewHand(SerializedProperty instanceProperty, SerializedProperty showPreviewProperty, GameObject previewPrefab, SteamVR_Skeleton_Pose_Hand handData, SteamVR_Skeleton_Pose sourcePose, bool forceUpdate)
         {
             GameObject preview = instanceProperty.objectReferenceValue as GameObject;
@@ -99,6 +101,14 @@ namespace Valve.VR
 
                 if (preview == null)
                 {
+                    if (previewPrefab == null)
+                    {
+                        if (previewErrorThrown == false)
+                            Debug.LogError("hand preview not found. Verify SteamVRSettings.previewHandLeft and previewHandRight are set to valid prefabs.");
+                        previewErrorThrown = true;
+                        return;
+                    }
+
                     preview = GameObject.Instantiate<GameObject>(previewPrefab);
                     preview.transform.localScale = Vector3.one * poserScale.floatValue;
                     preview.transform.parent = poser.transform;
@@ -252,22 +262,16 @@ namespace Valve.VR
             SteamVR_Skeleton_FingerExtensionTypes newMiddle = (SteamVR_Skeleton_FingerExtensionTypes)EditorGUILayout.EnumPopup("Middle movement", handData.middleFingerMovementType);
             SteamVR_Skeleton_FingerExtensionTypes newRing = (SteamVR_Skeleton_FingerExtensionTypes)EditorGUILayout.EnumPopup("Ring movement", handData.ringFingerMovementType);
             SteamVR_Skeleton_FingerExtensionTypes newPinky = (SteamVR_Skeleton_FingerExtensionTypes)EditorGUILayout.EnumPopup("Pinky movement", handData.pinkyFingerMovementType);
-            EditorGUIUtility.labelWidth = 0;
 
             EditorGUILayout.Space();
 
             EditorGUILayout.PropertyField(showPreviewProperty);
+            EditorGUIUtility.labelWidth = 0;
 
             if (newThumb != handData.thumbFingerMovementType || newIndex != handData.indexFingerMovementType ||
                     newMiddle != handData.middleFingerMovementType || newRing != handData.ringFingerMovementType ||
                     newPinky != handData.pinkyFingerMovementType)
             {
-                /*if ((int)newThumb >= 2 || (int)newIndex >= 2 || (int)newMiddle >= 2 || (int)newRing >= 2 || (int)newPinky >= 2)
-                {
-                    Debug.LogError("<b>[SteamVR Input]</b> Unfortunately only Static and Free modes are supported in this beta.");
-                    return;
-                }*/
-
                 handData.thumbFingerMovementType = newThumb;
                 handData.indexFingerMovementType = newIndex;
                 handData.middleFingerMovementType = newMiddle;

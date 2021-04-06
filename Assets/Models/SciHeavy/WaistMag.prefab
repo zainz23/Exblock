@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8150053044246188339}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0014501809, y: -0.029030995, z: -0.034376632}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,6 +59,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83,6 +85,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &453923201799103371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +137,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
+  hoverPriority: 0
 --- !u!65 &5607359085079007013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -214,6 +218,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5340048841031826977}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SendMessage
         m_Mode: 5
         m_Arguments:
@@ -225,6 +230,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2896252239986587000}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_isKinematic
         m_Mode: 6
         m_Arguments:
@@ -254,3 +260,6 @@ MonoBehaviour:
   hasThrown: 0
   emptySocket: {fileID: 7427867030632597609, guid: dea994e33d113774481764d83943c1ee,
     type: 3}
+  magDumpSound: {fileID: 0}
+  magLoadSound: {fileID: 0}
+  prefabTag: 0

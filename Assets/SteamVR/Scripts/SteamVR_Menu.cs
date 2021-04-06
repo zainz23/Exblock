@@ -167,11 +167,12 @@ namespace Valve.VR
                 {
                     if (GUILayout.Button("Switch to Standing"))
                         SteamVR.settings.trackingSpace = ETrackingUniverseOrigin.TrackingUniverseStanding;
+
                     if (GUILayout.Button("Center View"))
                     {
-                        var system = OpenVR.System;
-                        if (system != null)
-                            system.ResetSeatedZeroPose();
+                        var chaperone = OpenVR.Chaperone;
+                        if (chaperone != null)
+                            chaperone.ResetZeroPose(SteamVR.settings.trackingSpace);
                     }
                 }
                 else
@@ -223,7 +224,7 @@ namespace Valve.VR
             var texture = overlay.texture as RenderTexture;
             if (texture == null)
             {
-                Debug.LogError("<b>[SteamVR]</b> Menu requires overlay texture to be a render texture.");
+                Debug.LogError("<b>[SteamVR]</b> Menu requires overlay texture to be a render texture.", this);
                 return;
             }
 
